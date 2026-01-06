@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Developers Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0e0000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 750px;
+            margin: 50px auto;
+            border-color: #fff;
+        }
+
+        .form-head {
+            padding: 20px;
+            background: rgb(155, 149, 236);
+            text-align: center;
+        }
+
+        .form-head h4 {
+            background: #000;        
+            color: #fff;
+            padding: 18px;
+            margin: 10px 0 0;
+        }
+
+        .form-box {
+            padding: 25px;
+            background: rgb(2, 80, 37);
+            color: white;
+        }
+
+      
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .form-row label {
+            width: 180px;           
+            font-weight: bold;
+        }
+
+        .form-row input,
+        .form-row select,
+        .form-row textarea {
+            flex: 1;
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        
+        .options-group {
+            display: flex;
+            flex: 1;
+        }
+
+        .options-group label {
+            font-weight: normal;
+            margin-right: 20px;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 10px;
+            background: #d68c03;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #c9760a;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="form-head">
+        <h1>DEVELOPERS SURVEY FORM</h1>
+        <h4>Thank you for taking the time to help us know about worldwide developers</h4>
+    </div>
+
+    <div class="form-box">
+        <form method="post">
+
+            <!-- Name -->
+            <div class="form-row">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-row">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Age -->
+            <div class="form-row">
+                <label>Age</label>
+                <input type="number" name="age" placeholder="Enter your age">
+            </div>
+
+            <!-- Nationality -->
+            <div class="form-row">
+                <label>Nationality</label>
+                <select name="nationality">
+                    <option value="">Select your country</option>
+                    <option>Sri Lanka</option>
+                    <option>India</option>
+                    <option>USA</option>
+                    <option>UK</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <!-- Developer Type -->
+            <div class="form-row">
+                <label>Developer Type</label>
+                <div class="options-group">
+                    <label><input type="radio" name="developer"> Frontend</label>
+                    <label><input type="radio" name="developer"> Backend</label>
+                    <label><input type="radio" name="developer"> Full Stack</label>
+                </div>
+            </div>
+
+            <!-- Qualification -->
+            <div class="form-row">
+                <label>Qualification</label>
+                <div class="options-group">
+                    <label><input type="checkbox"> 10+2</label>
+                    <label><input type="checkbox"> Graduation</label>
+                    <label><input type="checkbox"> Degree</label>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="form-row">
+                <label>Best Area</label>
+                <textarea rows="4" placeholder="Write here..."></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

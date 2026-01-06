@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Song Search with Lyrics</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+    }
+
+    #search-area {
+        height: 60vh;
+        background: url("https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f")
+            no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+    }
+
+    .search-content {
+        background: rgba(0,0,0,0.6);
+        padding: 30px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .search-box {
+        display: flex;
+        gap: 10px;
+    }
+
+    .search-box input {
+        flex: 1;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+
+    .search-box button {
+        width: 80px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: pink;
+        font-weight: bold;
+    }
+
+    #results-area {
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    #results-area ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #results-area li {
+        background: #fff;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #results-area button {
+        background: #ff69b4;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        color: white;
+    }
+
+    #more {
+        text-align: center;
+        margin: 20px;
+    }
+
+    #more button {
+        margin: 0 5px;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+        background-color: #ff69b4;
+        color: white;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- FIRST DIV: Search Area -->
+<div id="search-area">
+    <div class="search-content">
+        <h1>Lyrics Search</h1>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Enter song name...">
+            <button onclick="searchSongs()">Search</button>
+        </div>
+    </div>
+</div>
+
+<!-- SECOND DIV: Results and Lyrics Container -->
+<div id="results-container" style="display: flex;  gap: 0px; max-width: 1000px; margin: 20px auto;">
+    <!-- Left Column: Songs -->
+    <div id="results-area" style="flex: 1;"></div>
+    <!-- Right Column: Lyrics -->
+    <div id="lyrics-area" style="flex: 1; background:none; padding: 15px; border-radius: 8px; min-height: 300px;">
+        
+    </div>
+</div>
+<!-- Pagination -->
+<div id="more"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
